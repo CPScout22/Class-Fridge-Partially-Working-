@@ -1,0 +1,101 @@
+import random
+
+
+class Fridge:
+    
+    
+    def __init__(self, Things, Opendadoor, run):
+        self.Things = 0
+        self.Opendadoor = False
+        self.run = True
+        
+    
+    def ayoo(self, ko):
+        
+        if ko == 'a':
+            
+            print("There'z: ", self.Things, " of things in da fridge")
+            
+            print("fridge open dat is: ", self.Opendadoor)
+            
+            print("Da fridge dat running is: ", self.run)
+            
+            
+            if self.run == True:
+                print("ayooo your fridge!")
+        
+        if ko == 'i':
+            print("There'z ", self.Things, " tings in da fridge")
+        
+        if ko == 'd':
+            print("Da fridge that's open is: ", self.Opendadoor)
+        
+        if ko == 'r':
+            print("Da fridge dat running is: ", self.run)
+            
+            if self.run == True:
+                print("ayooo your fridge!")
+                
+    
+    def Opendadoor(self):
+        self.Opendadoor = True
+    
+    def Closedadoor(self):
+        self.Opendadoor = False
+    
+    def yeetdafridge(self, x):
+        
+        if self.Opendadoor == True:
+            self.Things += x
+        
+        else:
+            print("error lol wtf")
+    
+    def foodz(self):
+        self.Things -= 10
+
+
+print()
+fridge = Fridge(0, False, True)
+
+
+
+fridge.ayoo('a')
+print()
+fridge.ayoo('d')
+
+
+
+y = int(input("How many items do you want to put in the fridge?"))
+fridge.yeetdafridge(y)
+fridge.ayoo('i')
+choice = input("Do you want to make da foodz?")
+
+
+if choice == "yes":
+    fridge.foodz()
+
+
+else:
+    print("ok, foodz made was not -__- ")
+    
+
+print("Now", end = ' ')
+fridge.ayoo('i')
+
+
+yo = input("wanna close da fridge no cap?")
+
+
+if yo == "yes":
+    print("yo fridge is now shut bruh")
+elif yo == "no":
+    print("wtf bruh aint no way why you open it den?")
+
+else:
+    print("yea didn't understand you bruh we done now")
+
+fridge.ayoo('d')
+
+
+
